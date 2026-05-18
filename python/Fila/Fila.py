@@ -1,15 +1,31 @@
 class Fila:
     def __init__(self):
-        self.dados = []
+        self._dados = []
         
     def enfileirar(self, paciente):
-        self.dados.append(paciente)
+        self._dados.append(paciente)
         
+    def remover_da_fila(self):
+        if len(self._dados) == 0:
+            return None
+        return self._dados.pop(0)
         
-fila = Fila()
-fila.enfileirar("João")
-fila.enfileirar("Maria")
-print(fila.dados)
+    def ir_pra_frente(self):
+        if len(self._dados) == 0:
+            return None
+        return self._dados[0]
+        
+fila1 = Fila()
+fila1.enfileirar({"nome": "Ana"})
+fila1.enfileirar({"nome": "Pedro"})
+
+print(fila1.ir_pra_frente())   # → {'nome': 'Ana'}
+print(fila1._dados)  
+
+removido = fila1.remover_da_fila()
+print(removido)
+print(fila1._dados)
+
 
 
 
