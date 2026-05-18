@@ -20,9 +20,42 @@ class HeapMaximo:
         self._dados.append(paciente)
         self._subir(len(self._dados)-1)
         
+    def _descer(self,i):
+        n =len(self._dados)
+        while True:
+            maior = i
+            esquerdo = self._filho_esquerdo(i)
+            direito =self._filho_direito(i)
+            
+            if esquerdo < n and self._dados[esquerdo]["prioridade"] > self._dados[maior]["prioridade"]:
+                maior = esquerdo
+            if direito < n and self._dados[direito]["prioridade"]> self._dados[maior]["prioridade"]:
+                maior = direito
+            if maior != i:
+                self._dados[i], self._dados[maior] = self._dados[maior], self._dados[i]
+                i = maior
+            else:
+                break
+        
+    def remover_max(self):
+        if len(self._dados) == 0:
+            return None
+        
+        self._dados[0], self._dados[-1] = self._dados[-1], self._dados[0]
+        paciente = self._dados.pop()
+        
+        if len(self._dados) > 0:
+            self._descer(0)
+        return paciente
+        
 heap = HeapMaximo()
 heap.adicionar({"nome": "Dona Maria", "prioridade": 3})
 heap.adicionar({"nome": "Zé",         "prioridade": 1})
 heap.adicionar({"nome": "Gestante",   "prioridade": 5})
+heap.adicionar({"nome": "Idoso",      "prioridade": 4})
+
+print(heap.remover_max())  
+print(heap.remover_max())  
+print(heap.remover_max()) 
 
 print(heap._dados)
