@@ -47,6 +47,17 @@ class HeapMaximo:
         if len(self._dados) > 0:
             self._descer(0)
         return paciente
+    
+    def topo(self):
+        if len(self._dados) == 0:
+            return None
+        return self._dados[0]
+
+    def tamanho(self):
+        return len(self._dados)
+    
+    def listar(self):
+        return list(self._dados)
         
 heap = HeapMaximo()
 heap.adicionar({"nome": "Dona Maria", "prioridade": 3})
@@ -58,4 +69,7 @@ print(heap.remover_max())
 print(heap.remover_max())  
 print(heap.remover_max()) 
 
+print(heap.topo())
+print(heap.tamanho())
+print(heap.listar())
 print(heap._dados)
