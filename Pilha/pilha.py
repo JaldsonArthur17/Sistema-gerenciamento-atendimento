@@ -4,5 +4,19 @@ class Pilha:
     
     def empilhar(self, item):
         self._dados.append(item)
-    
         
+    def desempilhar(self):
+        if len(self._dados) == 0:
+            return None
+        return self._dados.pop()
+    
+pilha = Pilha()
+pilha.empilhar({"nome": "Ana",   "hora": "09:00"})
+pilha.empilhar({"nome": "Pedro", "hora": "09:15"})
+pilha.empilhar({"nome": "Maria", "hora": "09:30"})
+
+print(pilha.desempilhar())
+print(pilha.desempilhar())
+print(pilha._dados)
+
+print(pilha._dados)
