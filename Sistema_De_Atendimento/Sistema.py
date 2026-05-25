@@ -10,12 +10,25 @@ class Sistema_de_Atendmento:
         
     def cadastrar_paciente(self, nome, prioritario = False, prioridade =1):
         if prioritario :
-            paciente = {"nome": nome, "prioridade": prioridade}
+            paciente = {"nome": nome, "tipo": "prioritario", "prioridade": prioridade}
             self.fila_prioritaria.adicionar(paciente)
         else:
             paciente = {"nome": nome, "tipo": "comum"}
             self.fila_comum.enfileirar(paciente)
         
+    def chamar_proximo_paciente(self):
+        if not self.fila_prioritaria.esta_vazio():
+            paciente = self.fila_prioritaria.remover_max()
+        elif not self.fila_comum.esta_vazio():
+            paciente = self.fila_comum.remover_da_fila()
+        else:
+            print("Nenhum paciente em aguardo")
+            return None
+        self.historico.empilhar(paciente)
+        print(f"chamando paciente: {paciente['nome']} ({paciente['tipo']})")
+        return paciente
+            
+            
 sistema = Sistema_de_Atendmento()
 print(sistema.fila_comum.tamanho_da_fila())
 print(sistema.fila_prioritaria.tamanho())
