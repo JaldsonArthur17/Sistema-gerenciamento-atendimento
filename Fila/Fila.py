@@ -20,6 +20,9 @@ class Fila:
     
     def listar_na_fila(self):
         return self._dados
+    
+    def esta_vazia(self):
+        return len(self._dados) == 0
         
 fila1 = Fila()
 fila1.enfileirar({"nome": "Ana"})

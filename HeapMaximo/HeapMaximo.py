@@ -58,6 +58,9 @@ class HeapMaximo:
     
     def listar(self):
         return list(self._dados)
+    
+    def esta_vazio(self):
+        return len(self._dados) == 0
         
 heap = HeapMaximo()
 heap.adicionar({"nome": "Dona Maria", "prioridade": 3})
