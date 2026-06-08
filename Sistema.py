@@ -19,7 +19,7 @@ class Sistema_de_Atendimento:
     def chamar_proximo_paciente(self):
         if not self.fila_prioritaria.esta_vazio():
             paciente = self.fila_prioritaria.remover_max()
-        elif not self.fila_comum.esta_vazio():
+        elif not self.fila_comum.esta_vazia():
             paciente = self.fila_comum.remover_da_fila()
         else:
             print("Nenhum paciente em aguardo")
