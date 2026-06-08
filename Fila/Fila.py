@@ -25,19 +25,7 @@ class Fila:
         return len(self._dados) == 0
         
 fila1 = Fila()
-fila1.enfileirar({"nome": "Ana"})
-fila1.enfileirar({"nome": "Pedro"})
-fila1.enfileirar({"nome": "Carlos"})
 
-print(fila1.tamanho_da_fila())
-print(fila1.listar_na_fila())
-
-print(fila1.ir_pra_frente())   
-print(fila1._dados)  
-
-removido = fila1.remover_da_fila()
-print(removido)
-print(fila1._dados)
 
 
 

@@ -63,16 +63,3 @@ class HeapMaximo:
         return len(self._dados) == 0
         
 heap = HeapMaximo()
-heap.adicionar({"nome": "Dona Maria", "prioridade": 3})
-heap.adicionar({"nome": "Zé",         "prioridade": 1})
-heap.adicionar({"nome": "Gestante",   "prioridade": 5})
-heap.adicionar({"nome": "Idoso",      "prioridade": 4})
-
-print(heap.remover_max())  
-print(heap.remover_max())  
-print(heap.remover_max()) 
-
-print(heap.topo())
-print(heap.tamanho())
-print(heap.listar())
-print(heap._dados)

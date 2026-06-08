@@ -43,48 +43,57 @@ def menu():
     sistema = Sistema_de_Atendimento()
 
     while True:
-        print("\n=============================")
-        print("   SISTEMA DE ATENDIMENTO")
-        print("=============================")
+        print("\nSISTEMA DE ATENDIMENTO\n")
         print("1. Cadastrar paciente comum")
         print("2. Cadastrar paciente prioritário")
         print("3. Chamar próximo paciente")
         print("4. Desfazer último atendimento")
         print("5. Ver filas")
         print("6. Sair")
-        print("=============================")
 
         opcao = input("Escolha uma opção: ")
 
         if opcao == "1":
-            nome = input("Nome do paciente: ")
+            nome = input("Nome do paciente?: ")
             sistema.cadastrar_paciente(nome)
             print(f"{nome} adicionado à fila comum.")
 
         elif opcao == "2":
-            nome = input("Nome do paciente: ")
-            print("Nível de prioridade:")
-            print("  3 - Idoso")
-            print("  4 - Gestante")
-            print("  5 - Emergência")
+            nome = input("Nome do paciente?: ")
+            print("Nível de prioridade?:")
+            print("  3 --> Idoso")
+            print("  4 --> Gestante")
+            print("  5 --> Emergência")
             prioridade = int(input("Prioridade: "))
             sistema.cadastrar_paciente(nome, prioritario=True, prioridade=prioridade)
             print(f"{nome} adicionado à fila prioritária com prioridade {prioridade}.")
 
         elif opcao == "3":
-            pass
+            sistema.chamar_proximo_paciente()
 
         elif opcao == "4":
-            pass
+            sistema.desfazer_atendimento()
 
         elif opcao == "5":
-            pass
+            print("\n>>>> Fila Prioritária <<<<<")
+            if sistema.fila_prioritaria.esta_vazio():
+                print("Nenhum paciente prioritário aguardando.")
+            else:
+                for p in sistema.fila_prioritaria.listar():
+                    print(f"  {p['nome']} (prioridade {p['prioridade']})")
+
+            print("\n>>>>> Fila Comum <<<<<")
+            if sistema.fila_comum.esta_vazia():
+                print("Nenhum paciente comum aguardando.")
+            else:
+                for p in sistema.fila_comum.listar_na_fila():
+                    print(f"  {p['nome']}")
 
         elif opcao == "6":
-            print("Encerrando o sistema. Até logo!")
+            print("Encerrando...")
             break
 
         else:
-            print("Opção inválida.")
+            print("opção inválida, tente de novo")
 
 menu()
