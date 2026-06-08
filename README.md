@@ -58,30 +58,3 @@ python Sistema.py
 ## Funcionalidades
 
 ```
-=============================
-   SISTEMA DE ATENDIMENTO
-=============================
-1. Cadastrar paciente comum
-2. Cadastrar paciente prioritário
-3. Chamar próximo paciente
-4. Desfazer último atendimento
-5. Ver filas
-6. Sair
-=============================
-```
-
-- **Opção 1** — Cadastra paciente na fila comum
-- **Opção 2** — Cadastra paciente prioritário com nível de prioridade:
-  - `3` → Idoso
-  - `4` → Gestante
-  - `5` → Emergência
-- **Opção 3** — Chama o próximo paciente (prioritários sempre antes dos comuns)
-- **Opção 4** — Desfaz o último atendimento, devolvendo o paciente à fila correta
-- **Opção 5** — Exibe todos os pacientes aguardando nas duas filas
-- **Opção 6** — Encerra o sistema
-
----
-
-## Autor
-**Jaldson Arthur Silva Portela**  
-ADS — 3º Período — IFPE
