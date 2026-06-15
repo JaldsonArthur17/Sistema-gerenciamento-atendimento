@@ -1,16 +1,16 @@
-# Sistema de Atendimento — Estrutura de Dados
+# Sistema de Atendimento com Estrutura de Dados
 
-Projeto final da disciplina de **Estrutura de Dados** do curso de Análise e Desenvolvimento de Sistemas (ADS) — 3º Período — IFPE.
+Projeto final da disciplina de **Estrutura de Dados** do curso de (ADS) 3º Período IFPE NOITE/TARDE
 
 Simulação de um sistema de atendimento de clínica médica utilizando estruturas de dados implementadas do zero em Python.
 
----
+
 
 ## Sobre o Projeto
 
 O sistema gerencia filas de pacientes distinguindo entre pacientes **comuns** e **prioritários**, garantindo que casos de maior urgência sejam atendidos primeiro. Também permite desfazer o último atendimento realizado.
 
----
+
 
 ## Estruturas de Dados Utilizadas
 
@@ -22,7 +22,7 @@ O sistema gerencia filas de pacientes distinguindo entre pacientes **comuns** e 
 
 Todas as estruturas foram implementadas manualmente, sem uso de bibliotecas prontas.
 
----
+
 
 ## Estrutura do Projeto
 
@@ -41,7 +41,7 @@ Sistema-gerenciamento-atendimento/
 └── Sistema.py
 ```
 
----
+
 
 ## Como Rodar
 
@@ -53,8 +53,4 @@ No terminal, na pasta raiz do projeto:
 python Sistema.py
 ```
 
----
 
-## Funcionalidades
-
-```
