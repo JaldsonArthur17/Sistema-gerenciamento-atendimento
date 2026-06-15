@@ -18,7 +18,7 @@ O sistema gerencia filas de pacientes distinguindo entre pacientes **comuns** e 
 |---|---|---|
 | **Fila** | FIFO — First In, First Out | Pacientes comuns aguardando atendimento |
 | **Heap Máximo** | Maior prioridade sempre na raiz | Pacientes prioritários (idosos, gestantes, emergências) |
-| **Pilha** | LIFO — Last In, First Out | Histórico de atendimentos — permite desfazer |
+| **Pilha** | LIFO — Last In, First Out | Histórico de atendimentos que permite desfazer os atendimentos |
 
 Todas as estruturas foram implementadas manualmente, sem uso de bibliotecas prontas.
 
@@ -39,18 +39,6 @@ Sistema-gerenciamento-atendimento/
 │   └── Pilha.py
 │
 └── Sistema.py
-```
-
-
-
-## Como Rodar
-
-**Pré-requisito:** Python 3 instalado.
-
-No terminal, na pasta raiz do projeto:
-
-```bash
-python Sistema.py
 ```
 
 
