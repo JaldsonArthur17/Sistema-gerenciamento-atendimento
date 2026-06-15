@@ -1,5 +1,4 @@
-#sistema - junta as 3 estruturas de dados 
-#organiza as 3 estruturas de dados:
+#sistema junta as 3 estruturas de dados 
 #Fila para pacientes comuns
 #HeapMaximo para pacientes prioritários
 #Pilha para histórico de atendimentos (permite desfazer)
