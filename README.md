@@ -1,1 +1,1 @@
-Este projeto simula um sistema de atendimento de clínica médica que gerencia filas de pacientes utilizando estruturas de dados implementadas do zero em Python. O sistema diferencia pacientes comuns de pacientes prioritários, garantindo que casos urgentes sejam sempre atendidos primeiro, e permite desfazer o último atendimento realizado. As estruturas utilizadas são Fila, Heap Máximo e Pilha, cada uma responsável por uma parte específica do problema.
+.
